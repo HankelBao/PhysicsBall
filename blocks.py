@@ -52,13 +52,13 @@ class Block():
 
     def left(self):
         return self.x
-    
+
     def right(self):
         return self.x+self.r*2
 
     def top(self):
         return self.y
-    
+
     def bottom(self):
         return self.y+self.r*2
 

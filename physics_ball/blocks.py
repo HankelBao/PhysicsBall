@@ -1,4 +1,3 @@
-from env import *
 import random
 
 blocks = []
@@ -32,8 +31,9 @@ def collide(block):
         blocks.remove(block)
 
 def update_pos():
+    global blocks
     for block in blocks:
-        block.y -= 20
+        block.y -= 0.2
 
 def update_display():
     for block in blocks:

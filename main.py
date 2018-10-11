@@ -24,10 +24,10 @@ while True:
         screen.fill((0,0,0))
         shooter.update_display()
         blocks.update_display()
-        blocks.update_pos()
         pygame.display.flip()
         if not shooter.balls_alive():
             shooting = False
+            blocks.update_pos()
             blocks.load()
     else:
         keys = pygame.key.get_pressed()
@@ -38,7 +38,7 @@ while True:
             if shooter_x < width:
                 shooter_x += 2
         if keys[pygame.K_UP]:
-            if shooter_y > 0:
+            if shooter_y > 40:
                 shooter_y -= 2
         if keys[pygame.K_DOWN]:
             if shooter_y < height:
